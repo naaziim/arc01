@@ -14,13 +14,9 @@ resource "aws_eks_cluster" "eks-cluster" {
 
   version = 1.33
 
-  depends_on = [aws_iam_role_policy_attachment.AmazonEKSClusterPolicy]
 }
 
 
 
 
 
-
-  eks_cluster_role_arn = data.aws_iam_role.lab_role.arn
-  eks_node_role_arn    = data.aws_iam_role.lab_role.arn
